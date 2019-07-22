@@ -48,11 +48,8 @@ class PlainOldActivity : AppCompatActivity() {
         val binding : PlainActivityBinding =
                 DataBindingUtil.setContentView(this, R.layout.plain_activity)
 
-        binding.name = "Mauricio"
-        binding.lastName = "Laine"
-
+        binding.viewmodel = viewModel
         //Explicitly setting initial values is a bad pattern. We'll fix that.
-        updateLikes()
     }
 
     /**
