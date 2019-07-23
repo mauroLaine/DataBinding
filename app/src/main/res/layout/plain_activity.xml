@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (C) 2018 The Android Open Source Project
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -20,9 +19,10 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewmodel"
-            type="com.example.android.databinding.basicsample.data.SimpleViewModel"/>
+            type="com.example.android.databinding.basicsample.data.SimpleViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,12 +31,12 @@
 
         <TextView
             android:id="@+id/plain_name"
-            android:text="@{viewmodel.name}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="128dp"
+            android:text="@{viewmodel.name}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,12 +44,12 @@
 
         <TextView
             android:id="@+id/plain_lastname"
-            android:text="@{viewmodel.lastName}"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="128dp"
+            android:text="@{viewmodel.lastName}"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,6 +74,7 @@
             android:id="@+id/likes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="@{Integer.toString(viewmodel.likes)}"
             android:textAppearance="@style/TextAppearance.AppCompat.Title"
             app:layout_constraintBottom_toTopOf="@+id/like_button"
             app:layout_constraintEnd_toEndOf="@+id/likes_label"
